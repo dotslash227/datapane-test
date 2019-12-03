@@ -14,6 +14,9 @@ def EntryPage(request):
         "data": data
     })
 
+def csvView(request):
+    return render(request, "csv.html", {})
+
 class Entries(View):    
     def get(self, request):
         form = EntryForm()

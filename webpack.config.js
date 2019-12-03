@@ -6,7 +6,8 @@ module.exports = {
   context: __dirname,
 
   entry:{
-  myapp: './reactjs/app/myapp'
+  myapp: './reactjs/app/myapp',
+  csv: './reactjs/app/csv'
 
 },
 

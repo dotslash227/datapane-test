@@ -47,3 +47,8 @@ body {
     margin-left: -15rem;
   }
 }
+
+.table-data{
+  font-size:10px;
+  padding: -2px;
+}
