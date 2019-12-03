@@ -10,7 +10,7 @@ class Navigation(models.Model):
 
 class Entries(models.Model):
     name = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
     age = models.IntegerField(default=0)
 
     def __str__(self):

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    
+    <h1>Adding an Entry</h1>
+    <hr />
+
+    <form name="entry-form" action="{% url 'main:entry' %}" method="post">
+        {% csrf_token %}
+        {% for each in form %}
+            <p>Enter {{each.label}}</p>
+            {{each}}            
+        {% endfor %}
+        <input type="submit" value="Submit form" name="submit" />
+    </form>
+{% endblock content %}

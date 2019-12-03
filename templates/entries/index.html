@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    
+    <h1>Viewing Entries</h1>
+    <hr />
+    
+    <table class="table table-bordered">
+        <thead>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>            
+        </thead>
+        <tbody>
+            {% for each in data %}
+            <tr>
+                <td>{{each.name}}</td>
+                <td>{{each.email}}</td>
+                <td>{{each.age}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}

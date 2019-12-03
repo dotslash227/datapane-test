@@ -25,17 +25,16 @@
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">DataPane Test</div>
-            <div class="list-group list-group-flush">
-              {% for each in navigation %}
-               <a href="{% url 'main:home' %}" class="list-group-item list-group-item-action bg-light">{{each.title}}</a>
-              {% endfor %}                
+            <div class="list-group list-group-flush">                      
+              <a href="{% url 'main:home' %}" class="list-group-item list-group-item-action bg-light">View All Entries</a>
+              <a href="{% url 'main:entry-index' %}" class="list-group-item list-group-item-action bg-light">View All Entries</a>
+              <a href="{% url 'main:entry' %}" class="list-group-item list-group-item-action bg-light">Add Entry</a>
             </div>
         </div>
           <!-- /#sidebar-wrapper -->
           <div id="page-content-wrapper">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-                
+                        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>                
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
                         </button>
