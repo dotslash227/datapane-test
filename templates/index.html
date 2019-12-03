@@ -1,6 +1,9 @@
 {% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
 
 {% block content %}        
   <h1 class="mt-4">Home</h1>
   <p>Select one of the options on the left of the screen</p>          
+  <div id="myapp"></div>
+  {% render_bundle 'myapp' %}
 {%  endblock content %}
