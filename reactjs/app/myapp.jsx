@@ -1,3 +1,6 @@
+// Testing app to check integration. Please ignore.
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 

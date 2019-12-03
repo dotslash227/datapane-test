@@ -4,9 +4,12 @@ from .forms import EntryForm
 from django.contrib import messages
 from .models import Entries as EntryModel
 
+# Home View
 def Home(request):
     return render(request, "index.html", {})
 
+
+# Page for viewing entry
 def EntryPage(request):
     data = EntryModel.objects.all()
 
@@ -14,9 +17,14 @@ def EntryPage(request):
         "data": data
     })
 
+
+# Base page for  rendering the csv upload form
 def csvView(request):
     return render(request, "csv.html", {})
 
+
+
+# Class based view for showing entry form and handling post mehtod
 class Entries(View):    
     def get(self, request):
         form = EntryForm()
@@ -28,6 +36,7 @@ class Entries(View):
     def post(self, request):
         form = EntryForm(request.POST)
         if form.is_valid():
+            # Try to save form, send to  form if error found and show a message. Not doing exception handling right now
             try:
                 form.save()
             except:

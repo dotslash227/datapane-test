@@ -15,10 +15,12 @@ class CSVReader extends React.Component{
     }
 
     handleFile(event){
+        // Function to handle the file upload event and store it in the state
         this.setState({csvfile:event.target.files[0]});        
     };
 
     importCSV(){        
+        // Importing CSV and storing the data into state using Papaparse
         const {csvfile} = this.state;        
         console.log("importsing csv", csvfile);
         Papa.parse(csvfile, {
@@ -31,6 +33,7 @@ class CSVReader extends React.Component{
     };    
 
     renderTable(){
+        // Method to render table from the data array
         const {data} = this.state;
         if (data){
             return(
